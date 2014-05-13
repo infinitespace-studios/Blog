@@ -1,4 +1,6 @@
-Blog
-====
+InfiniteSpace Studios Blog Samples
+==================================
 
-Code from the Blog
+This repository contains all the code and samples from the infinitespace-studios blog.
+
+
