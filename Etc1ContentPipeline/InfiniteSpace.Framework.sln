@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteSpace.Framework.Build.Tasks", "InfiniteSpace.Framework.Build.Tasks\InfiniteSpace.Framework.Build.Tasks.csproj", "{4BF31A36-824C-48F8-950C-A760106167C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Etc1Alpha.Test", "Etc1Alpha.Test\Etc1Alpha.Test.csproj", "{162FB1AC-23E2-407B-A03D-3C5DFD461EAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{162FB1AC-23E2-407B-A03D-3C5DFD461EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162FB1AC-23E2-407B-A03D-3C5DFD461EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162FB1AC-23E2-407B-A03D-3C5DFD461EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162FB1AC-23E2-407B-A03D-3C5DFD461EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF31A36-824C-48F8-950C-A760106167C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF31A36-824C-48F8-950C-A760106167C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF31A36-824C-48F8-950C-A760106167C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF31A36-824C-48F8-950C-A760106167C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Etc1Alpha.Test\Etc1Alpha.Test.csproj
+	EndGlobalSection
+EndGlobal
