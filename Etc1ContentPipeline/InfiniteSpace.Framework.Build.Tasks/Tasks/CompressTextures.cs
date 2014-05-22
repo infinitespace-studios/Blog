@@ -97,8 +97,9 @@ namespace InfiniteSpace.Framework.Build.Tasks
 
 				var process = new System.Diagnostics.Process ();
 				process.StartInfo.FileName = tool;
+                process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
 				process.StartInfo.Arguments = string.Format (" {0} --encode -o {1}", Source, Destination);
-				process.StartInfo.CreateNoWindow = false;
+				process.StartInfo.CreateNoWindow = true;
 				process.Start ();
 				process.WaitForExit ();
 			}

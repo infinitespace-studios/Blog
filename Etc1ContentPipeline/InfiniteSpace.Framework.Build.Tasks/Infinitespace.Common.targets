@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <UsingTask TaskName="InfiniteSpace.Framework.Build.Tasks.CompressTextures" AssemblyFile="./bin/Debug/InfiniteSpace.Framework.Build.Tasks.dll"/>
+  <UsingTask TaskName="InfiniteSpace.Framework.Build.Tasks.CompressTextures" AssemblyFile="./bin/$(Configuration)/InfiniteSpace.Framework.Build.Tasks.dll"/>
 
   <Target Name="_CompressAssets" AfterTargets="UpdateAndroidAssets" 
       BeforeTargets="UpdateAndroidInterfaceProxies" >
-     <CompressTextures InputFiles="@(_AndroidAssetsDest)" AndroidSdkDir="$(AndroidSdkDirectory)">
-        <Output TaskParameter="OutputFiles" ItemName="_AndroidAssetsDest"/>
-     </CompressTextures> 
-     <Touch Files="@(_AndroidAssetsDest)" />
+    <CompressTextures InputFiles="@(_AndroidAssetsDest)" AndroidSdkDir="$(AndroidSdkDirectory)">
+      <Output TaskParameter="OutputFiles" ItemName="_CompressedTextures"/>
+    </CompressTextures>
+     <Touch Files="@(_CompressedTextures)" />
   </Target>
 </Project>
