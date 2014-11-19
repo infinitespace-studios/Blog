@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="InfiniteSpaceStudios.AR.Droid">
+	<uses-sdk android:minSdkVersion="10" />
+	<application android:label="InfiniteSpaceStudios.AR.Droid">
+	</application>
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-feature android:name="android.hardware.camera" />
+</manifest>
