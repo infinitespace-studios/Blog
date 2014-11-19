@@ -17,7 +17,7 @@ namespace Etc1Alpha.Test
 				#if __ANDROID_11__
 				HardwareAccelerated=false,
 				#endif
-		ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.KeyboardHidden,
+		ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden,
 		MainLauncher = true)]
 	public class MainActivity : Activity
 	{

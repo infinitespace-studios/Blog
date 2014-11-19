@@ -3,10 +3,14 @@
   <UsingTask TaskName="InfiniteSpace.Framework.Build.Tasks.CompressTextures" AssemblyFile="./bin/$(Configuration)/InfiniteSpace.Framework.Build.Tasks.dll"/>
 
   <Target Name="_CompressAssets" AfterTargets="UpdateAndroidAssets" 
-      BeforeTargets="UpdateAndroidInterfaceProxies" >
+      BeforeTargets="UpdateAndroidInterfaceProxies" 
+      Inputs="@(_AndroidAssetsDest)"
+      Outputs="@(_AndroidAssetsDest->'%(RootDir)%(Directory)%(filename).etc1');@(_AndroidAssetsDest->'%(RootDir)%(Directory)%(filename).alpha')"
+      >
     <CompressTextures InputFiles="@(_AndroidAssetsDest)" AndroidSdkDir="$(AndroidSdkDirectory)">
       <Output TaskParameter="OutputFiles" ItemName="_CompressedTextures"/>
     </CompressTextures>
      <Touch Files="@(_CompressedTextures)" />
+     <Message Text="@(ReferencePath);@(ReferenceDependencyPaths)"/>
   </Target>
 </Project>
