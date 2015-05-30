@@ -16,6 +16,8 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>InfiniteSpaceStudios.AR.Droid</AssemblyName>
     <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <MonoGamePlatform>Android</MonoGamePlatform>
+    <MSBuildProgramFiles32 Condition=" '$(MSBuildProgramFiles32)' == '' ">$(MSBuildExtensionsPath)</MSBuildProgramFiles32>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +45,9 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="OpenTK" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\packages\MonoGame.Framework.Android.3.4.0.459\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity1.cs" />
@@ -69,5 +74,5 @@
   </ItemGroup>
   <Import Project="..\InfiniteSpaceStudios.AR\InfiniteSpaceStudios.AR.projitems" Label="Shared" Condition="Exists('..\InfiniteSpaceStudios.AR\InfiniteSpaceStudios.AR.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <Import Project="..\packages\MonoGame.Binaries.3.2.0\build\MonoAndroid\MonoGame.Binaries.targets" Condition="Exists('..\packages\MonoGame.Binaries.3.2.0\build\MonoAndroid\MonoGame.Binaries.targets')" />
+  <Import Project="$(MSBuildProgramFiles32)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
 </Project>

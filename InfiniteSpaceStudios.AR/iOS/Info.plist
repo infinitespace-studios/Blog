@@ -11,7 +11,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>project.MonoGame.InfiniteSpaceStudios.AR.iOS</string>
 	<key>MinimumOSVersion</key>
-	<string>4.2</string>
+	<string>5.1.1</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

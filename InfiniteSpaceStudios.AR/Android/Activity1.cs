@@ -38,8 +38,9 @@ namespace InfiniteSpaceStudios.AR.Droid.Droid
 			Game1.Activity = this;
 			var g = new Game1 ();
 			FrameLayout frameLayout = new FrameLayout(this);
-			g.Window.SurfaceFormat = Android.Graphics.Format.Rgba8888;
-			frameLayout.AddView (g.Window);  
+			var view = g.Services.GetService<View> ();
+			view.JavaCast<OpenTK.Platform.Android.AndroidGameView> ().SurfaceFormat = Android.Graphics.Format.Rgba8888;
+			frameLayout.AddView (g);  
 			try {
 				camera = Camera.Open ();
 				cameraView = new CameraView (this, camera);
